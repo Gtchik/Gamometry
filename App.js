@@ -1,11 +1,14 @@
 import React from 'react';
 import { StyleSheet, Text, View, AppRegistry } from 'react-native';
 import { StackNavigator } from 'react-navigation';
-import  mainActivity  from './Pages/mainActivity.js';
+import { HomePage } from './Pages/homePage';
 
+export default class App extends React.Component{
+  render() {
+    return (<MainNavigator />)
+  }
+}
 
-const App = StackNavigator({
-  mainActivity: {
-    screen: mainActivity
-  },
+const MainNavigator = StackNavigator({
+  Home: { screen: HomePage },
 });
